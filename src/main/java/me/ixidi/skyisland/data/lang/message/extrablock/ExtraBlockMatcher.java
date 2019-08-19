@@ -1,4 +1,4 @@
-package me.ixidi.skyisland.data.message.extrablock;
+package me.ixidi.skyisland.data.lang.message.extrablock;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

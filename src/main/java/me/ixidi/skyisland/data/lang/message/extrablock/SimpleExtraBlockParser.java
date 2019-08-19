@@ -1,6 +1,6 @@
-package me.ixidi.skyisland.data.message.extrablock;
+package me.ixidi.skyisland.data.lang.message.extrablock;
 
-import me.ixidi.skyisland.data.message.ComponentParser;
+import me.ixidi.skyisland.data.lang.message.ComponentParser;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
@@ -96,14 +96,14 @@ public class SimpleExtraBlockParser implements ExtraBlockParser {
         return this.matcher;
     }
 
-    private BaseComponent corrupted(String... reson) {
+    private BaseComponent corrupted(String... reason) {
         BaseComponent rootComponent = new TextComponent();
 
         rootComponent.setColor(ChatColor.DARK_RED);
         rootComponent.setBold(true);
         rootComponent.setUnderlined(true);
         rootComponent.addExtra("CORRUPTED_BLOCK");
-        rootComponent.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new BaseComponent[]{ new TextComponent(String.join("\n", Arrays.asList(reson))) }));
+        rootComponent.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new BaseComponent[]{ new TextComponent(String.join("\n", Arrays.asList(reason))) }));
 
         return rootComponent;
     }

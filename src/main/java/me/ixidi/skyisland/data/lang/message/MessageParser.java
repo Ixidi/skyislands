@@ -1,4 +1,4 @@
-package me.ixidi.skyisland.data.message;
+package me.ixidi.skyisland.data.lang.message;
 
 import net.md_5.bungee.api.chat.BaseComponent;
 

@@ -1,9 +1,9 @@
-package me.ixidi.skyisland.data.message;
+package me.ixidi.skyisland.data.lang.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import me.ixidi.skyisland.data.message.extrablock.ExtraBlockMatcher;
-import me.ixidi.skyisland.data.message.extrablock.ExtraBlockParser;
+import me.ixidi.skyisland.data.lang.message.extrablock.ExtraBlockMatcher;
+import me.ixidi.skyisland.data.lang.message.extrablock.ExtraBlockParser;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 

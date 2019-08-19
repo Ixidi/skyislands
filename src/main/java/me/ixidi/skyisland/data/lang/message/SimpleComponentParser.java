@@ -1,10 +1,8 @@
-package me.ixidi.skyisland.data.message;
+package me.ixidi.skyisland.data.lang.message;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
-
-import java.util.Map;
 
 public class SimpleComponentParser implements ComponentParser {
 
