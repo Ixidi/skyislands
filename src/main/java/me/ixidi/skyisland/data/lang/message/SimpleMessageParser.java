@@ -11,46 +11,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 
+@AllArgsConstructor
 public class SimpleMessageParser implements MessageParser {
-
-    public enum RequiredSize {
-        UPPER, LOWER, MIXED
-    }
 
     private ComponentParser componentParser;
     private ExtraBlockParser extraBlockParser;
-    private RequiredSize variableLettersSize;
-    private String variableFormat;
-
-    public SimpleMessageParser(ComponentParser componentParser, ExtraBlockParser extraBlockParser, RequiredSize variableLettersSize, String variableFormat) {
-        this.componentParser = componentParser;
-        this.extraBlockParser = extraBlockParser;
-        this.variableLettersSize = variableLettersSize;
-        this.variableFormat = variableFormat;
-    }
+    private VariablesParser variablesParser;
 
     @Override
     public BaseComponent parse(String message, Map<String, Object> variables) {
-        if (!variables.isEmpty()) {
-            for (Map.Entry<String, Object> entry : variables.entrySet()) {
-                String key;
-                switch (this.variableLettersSize) {
-                    case UPPER:
-                        key = entry.getKey().toUpperCase();
-                        break;
-                    case LOWER:
-                        key = entry.getKey().toLowerCase();
-                        break;
-                    case MIXED:
-                    default:
-                        key = entry.getKey();
-                        break;
-                }
-
-                String name = String.format(this.variableFormat, key);
-                message = message.replace(name, String.valueOf(entry.getValue()));
-            }
-        }
+        message = variablesParser.parse(message, variables);
 
         ExtraBlockMatcher blockMatcher = extraBlockParser.getMatcher();
         Matcher matcher = blockMatcher.getMatcher(message);

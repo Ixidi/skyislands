@@ -36,7 +36,7 @@ public class SimpleExtraBlockParser implements ExtraBlockParser {
     public BaseComponent parse(String block) {
         Matcher matcher = attributePattern.matcher(block);
         if (!matcher.find()) {
-            return corrupted("No attributes inside block.");
+            return corrupted("No attributes inside location.");
         }
 
         Map<String, String> attributeMap = new HashMap<>();

@@ -1,0 +1,11 @@
+string:
+  command:
+    allCommands: "Komendy pluginu {NAME}"
+message:
+  command:
+    noPermission: "&cNie masz uprawnień."
+    noCommand: "&cNie ma takiej komendy."
+    playerOnly: "&cKomenda dostępna tylko dla graczy."
+    help:
+      header: "&6&lSubkmendy dostępne dla ciebie:"
+      row: "&3&l-> &3{NAME} - {DESCRIPTION}."

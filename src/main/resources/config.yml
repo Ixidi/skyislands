@@ -2,3 +2,20 @@
 #   - "en" English
 #   - "pl" Polish (Polski)
 lang: "pl"
+
+# Islands world name.
+worldName: "SkyIsland"
+
+# Island Y coordinate bounds.
+minIslandY: 0
+maxIslandY: 256
+
+# Basic island size.
+islandSize: 100
+
+# Max island size. (After expansion)
+islandMaxSize: 150
+
+# Space between islands
+islandFreeSpace: 5
+

@@ -1,19 +1,16 @@
 package me.ixidi.skyisland.data.config;
 
+import lombok.AllArgsConstructor;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.List;
 import java.util.Set;
 
+@AllArgsConstructor
 public class BukkitConfigurationSectionWrapper implements Config {
 
     private String configName;
     private ConfigurationSection configuration;
-
-    public BukkitConfigurationSectionWrapper(String configName, ConfigurationSection configuration) {
-        this.configName = configName;
-        this.configuration = configuration;
-    }
 
     @Override
     public String getString(String key) {
