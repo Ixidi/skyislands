@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+//TODO Synchronized
+
 public class SerpentineGrid implements Grid {
 
     private int size;
